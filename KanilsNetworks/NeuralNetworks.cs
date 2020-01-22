@@ -9,6 +9,10 @@ namespace NeuralNetworks
 
     public class NeuralNetwork
     {
+        public static void Main(string[] args)
+        {
+
+        }
 
         public Topology Topology { get; }
         public List<Layer> Layers { get; }

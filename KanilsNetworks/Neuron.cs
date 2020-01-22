@@ -28,7 +28,14 @@ namespace NeuralNetworks
             var rnd = new Random();
             for (int i = 0; i < inputCount; i++)
             {
-                Weights.Add(rnd.NextDouble());
+                if (NeuronType == NeuronType.Input)
+                {
+                    Weights.Add(1);
+                }
+                else
+                {
+                    Weights.Add(rnd.NextDouble());
+                }
                 Inputs.Add(0);
             }
         }
@@ -64,15 +71,6 @@ namespace NeuralNetworks
             var sigmoid = Sigmoid(x);
             var result = sigmoid / (1 - sigmoid);
             return result;
-        }
-
-        public void SetWeights(params double[] weights)
-        {
-            //TODO:  удалить после добавления возможности обучения сети.
-            for (int i = 0; i < weights.Length; i++)
-            {
-                Weights[i] = weights[i];
-            }
         }
 
         public void Learn(double error, double learningRate)
