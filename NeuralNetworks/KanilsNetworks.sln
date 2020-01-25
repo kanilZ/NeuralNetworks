@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworks", "NeuralNet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NeuralNetworksTests", "..\NeuralNetworksTests\NeuralNetworksTests.csproj", "{7B3E70C6-DB32-43C3-BAD2-B7CAE72AAF65}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MedicalSystem", "..\MedicalSystem\MedicalSystem.csproj", "{288850E7-5D5E-4E13-BEB8-DDE9FDE6EE0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7B3E70C6-DB32-43C3-BAD2-B7CAE72AAF65}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7B3E70C6-DB32-43C3-BAD2-B7CAE72AAF65}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7B3E70C6-DB32-43C3-BAD2-B7CAE72AAF65}.Release|Any CPU.Build.0 = Release|Any CPU
+		{288850E7-5D5E-4E13-BEB8-DDE9FDE6EE0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{288850E7-5D5E-4E13-BEB8-DDE9FDE6EE0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{288850E7-5D5E-4E13-BEB8-DDE9FDE6EE0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{288850E7-5D5E-4E13-BEB8-DDE9FDE6EE0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

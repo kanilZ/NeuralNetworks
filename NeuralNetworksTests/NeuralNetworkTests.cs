@@ -114,7 +114,7 @@ namespace NeuralNetworks.Tests
             var testParasitizedImageInput = converter.Convert(@"C:\Users\konot\source\repos\NeuralNetworks\NeuralNetworksTests\images\Parasitized.png");
             var testUninfectedImageInput = converter.Convert(@"C:\Users\konot\source\repos\NeuralNetworks\NeuralNetworksTests\images\Uninfected.png");
 
-            var topology = new Topology(testParasitizedImageInput.Count, 1, 0.1, testParasitizedImageInput.Count / 2);
+            var topology = new Topology(testParasitizedImageInput.Length, 1, 0.1, testParasitizedImageInput.Length / 2);
             var neuralNetwork = new NeuralNetwork(topology);
 
             double[,] parasitizedInputs = GetData(parasitizedPath, converter, testParasitizedImageInput, size);
@@ -131,15 +131,15 @@ namespace NeuralNetworks.Tests
 
         }
 
-        private static double[,] GetData(string cellImages, PictureConverter converter, List<int> testImageInput, int size)
+        private static double[,] GetData(string cellImages, PictureConverter converter, double[] testImageInput, int size)
         {
             var images = Directory.GetFiles(cellImages);
-            var result = new double[size, testImageInput.Count];
+            var result = new double[size, testImageInput.Length];
 
             for (int i = 0; i < size; i++)
             {
                 var image = converter.Convert(images[i]);
-                for (int j = 0; j < image.Count; j++)
+                for (int j = 0; j < image.Length; j++)
                 {
                     result[i, j] = image[j];
                 }
